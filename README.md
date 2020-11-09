@@ -1,4 +1,4 @@
 # Petrovec
-Public repository for the domain-specific Portuguese word embedding models for the Oil and Gas Industry
+Public repository for the paper **Portuguese Word Embeddings for the Oil and Gas Industry: development and evaluation** 
 
-The project's page is avaylable at: http://petroles.ica.ele.puc-rio.br/
+Large files such as Corpora and pre-trained models are available at the project page: http://petroles.ica.ele.puc-rio.br/
