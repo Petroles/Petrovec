@@ -7,7 +7,7 @@ Testset and models are hardcoded into the script, see code for more details;
 ---
 
 # Selective NER Test
-The tool used to make the NER models can be found bellow: 
+The tool used to make the NER models can be found here: 
 	<https://github.com/jneto04/ner-pt>
 
 After cloning th repository and installing Flair 0.4.1 (Must be exactly this version), substitute the 'ner_flair.py' with the one found in the 'Selective NER Test' ZIP;
