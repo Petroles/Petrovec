@@ -1,0 +1,5 @@
+# GeoCorpus-V3
+
+Geocorpus is an evaluation corpus for the Portuguese language that collects several scientific works in the field of Geology. This corpus, originally developed by Daniela Amaral [doctoral thesis](http://tede2.pucrs.br/tede2/handle/tede/8035), contains works whose theme is geological entities (GE) related to the Brazilian Sedimentary Basin subdomain. The collected texts are essentially theses, dissertations, articles and bulletins from Petrobras’ geosciences publications. They were recovered and selected from the geological terms of the Chronostratigraphic table, which contains names of sedimentary rocks, names of Brazilian sedimentary basins, the terms related to Tectonics, Sedimentation and Magmatism and stratigraphic units.
+
+Our revision, performed with the help of Cassiana Michelin, PhD. It improved the corpus in various ways, such as categorazing entities in the large, heterogeneous "others" category into more specific subcategories of the Brazilian Sedimentary Basins domain. Changes are detailed in the GeoCorpus Change Report.
