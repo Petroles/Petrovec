@@ -1,0 +1,72 @@
+# Principais problemas ainda persistentes no preprocessamento
+
+//	- caracteres fora do range de codificação (alguns caracteres concatenados às palavras e que não chegam a ser exibidos no browser, mas prejudicam a identificação do termo correto)
+	
+//	- remover todos os caracteres que não sejam alfanuméricos, newline, ponto, hifen, & e outros premapeados
+	
+	
+//	- quebras de hifenização
+//		. eliminar termos que iniciam ou terminam com hífem. Ex:
+//			. perme-
+//			. -meabilidade
+//			. 20–
+			
+	//- parametrizar se haverá ou não a reconstrução das quebras de linha (por exemplo, nos glossários isso não é necessário porque o arquivo já contem um elemento por linha)
+//		. revisar as regras de recomposição das quebras de linha, comparando os arquivos tratados com os originais. Tem algumas linhas que parecem não estar sendo quebradas corretamente
+			
+//	- Processar corretamente sentenças curtas ( < 3 termos)
+			
+//	- substituir erros previamente mapeados e reconhecidos
+//		- 6leo
+		
+//	- todas as linhas começando com espaço
+//	- Adoção de nova estratégia: eliminando todos os caracteres não-alfanuméricos, mantendo apenas um subconjunto de exceções previamente mapeadas.
+		
+		
+//	- caracteres especiais:
+//		·
+//		æ
+//		
+//		†
+//		ˆ
+//		®
+		 
+		
+			
+	- Exemplos:
+//		. 1o, 2o, 3o, 4o... 124o   38o , 34a, 5d,   (numeros seguidos de a, o, m, j... um único caractere alfa)
+//			- texto = re.sub('[^0-9]+\w ', '', texto)
+//		. Mesma regra acima para unidades: 50km, 5l, 740m, 30min, 10g, 10mm, 5h, 50ms, 35μ, 6300μ,  50lb, 300psi, 40ml, 800oc, 750md, 400tri, 50bi, 170kgf, 300hp, 3000ppm, 76bar, 50pphm, 24mm, 40kn
+//		. 60°c, 50°f (separar °c incluindo espaço)
+//			. 60° - separar numero da unidade
+//			. $60
+//			. &54
+//			. 1000th, 1st, 2nd, 6rd, 22nd, 6th
+//		. 6x, 45x, 740x
+//		. n°
+//		. 1⁄2, 1⁄4, 3⁄4 (deve virar number)
+		. 02h30, 05h40
+//		. 1999–2001, 1996–1998
+		
+		
+		
+		. Linhas do tipo: 
+			<NUMBER> green <NUMBER> 
+			<NUMBER> blue <NUMBER> 
+			<NUMBER> itch <NUMBER> 			   // muitas linhas do tipo <number> 
+//			<NUMBER> 
+			<NUMBER> . <NUMBER> . <NUMBER>
+//			linhas vazias
+//			. linhas com menos de 3 termos
+			<NUMBER> arn <NUMBER> arn <NUMBER> arn <NUMBER> arn <NUMBER> arn <NUMBER> arn <NUMBER> arn <NUMBER> arn <NUMBER> arn <NUMBER> arn <NUMBER> arn <NUMBER> arn <NUMBER> arn <NUMBER> arn <NUMBER> arn <NUMBER> arn <NUMBER> arn <NUMBER> arn <NUMBER> arn <NUMBER> arn <NUMBER> arn <NUMBER> arn
+			<NUMBER>   <NUMBER> 
+			<NUMBER> gasebpipe07 <NUMBER>  
+			<NUMBER> gasebpipe08 <NUMBER>  
+			<NUMBER> gasebpipe09 <NUMBER>  
+			<NUMBER> gasebpipe10 <NUMBER>  
+			<NUMBER> gasebpipe11 <NUMBER> 
+			
+			
+				
+		. processar novamente o siglario (está com acentos, termos em maiusculo)
+		. fazer com que o script de consolidação apenas unifique os arquivos, sem fazer mais nenhum processamento adicional
